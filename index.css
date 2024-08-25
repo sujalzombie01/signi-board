@@ -23,9 +23,9 @@
     width: 10vw;
 }
 canvas{
-    height: 70vh;
-    width: 50vw;
+   
     border: 2px solid rgb(236, 195, 58);
+    
 }
 .outline{
     border: 3px solid black;
@@ -46,12 +46,7 @@ canvas{
 .sam3:hover{
     background-color: rgb(235, 129, 0);
 }
-.sam4{
-    background-color: aqua;
-}
-.sam4:hover{
-    background-color: rgb(0, 81, 255);
-}
+
 #down {
     display: flex;
     flex-direction: row;

@@ -53,3 +53,8 @@ save.addEventListener("click", ()=>{
             link.href = canvas.toDataURL();
             link.click();
 })
+window.addEventListener('beforeunload', (e)=>{
+    e.preventDefault();
+    e.returnValue=""
+
+})

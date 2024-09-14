@@ -35,6 +35,20 @@ canvas.addEventListener('mouseup', (event)=>{
 
 });
 
+canvas.addEventListener('touchstart', (f)=>{
+    const touch=f.touches[0];
+    const rect=canvas.getBoundingClientRect();
+    startDrawing(touch.clientX-rect.left,touch.clientY-rect.top);
+})
+canvas.addEventListener('touchmove', (k)=>{
+    k.preventDefault();
+    const touch=e.touches[0];
+    const rect=canvas.getBoundingClientRect();
+    draw(touch.clientX-rect.left,touch.clientY-rect.top);
+
+})
+canvas.addEventListener('touchend', stopDrawing);
+canvas.addEventListener('touchcancel', stopDrawing);
 background.addEventListener('change', (e)=>{
     ctx.fillStyle=e.target.value;
     ctx.fillRect(0,0,800,500)
